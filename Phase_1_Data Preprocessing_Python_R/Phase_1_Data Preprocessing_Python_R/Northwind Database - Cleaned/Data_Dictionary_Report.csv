@@ -1,0 +1,89 @@
+﻿Table_Name,Column_Name,Data_Type,Non_Null_Count,Sample_Value
+Categories,CategoryID,int64,8,1
+Categories,CategoryName,object,8,Beverages
+Categories,Description,object,4,"Sweet and savory sauces, relishes, spreads, and se"
+Categories,Picture,object,8,\u0015\u001c\/\u0000\u0002\u0000\u0000\u0000\r\u00
+CustomerCustomerDemo,CustomerID,object,0,N/A
+CustomerCustomerDemo,CustomerTypeID,object,0,N/A
+CustomerDemographics,CustomerTypeID,object,0,N/A
+CustomerDemographics,CustomerDesc,object,0,N/A
+Customers,CustomerID,object,91,ALFKI
+Customers,CompanyName,object,91,alfreds futterkiste
+Customers,ContactName,object,91,Maria Anders
+Customers,ContactTitle,object,91,Sales Representative
+Customers,Address,object,91,Obere Str. 57
+Customers,City,object,91,Berlin
+Customers,Region,object,31,BC
+Customers,PostalCode,object,91,12209
+Customers,Country,object,91,Germany
+Customers,Phone,object,91,030-0074321
+Customers,Fax,object,61,030-0076545
+EmployeeTerritories,EmployeeID,int64,51,1
+EmployeeTerritories,TerritoryID,int64,51,6897
+Employees,EmployeeID,int64,10,1
+Employees,LastName,object,10,Davolio
+Employees,FirstName,object,10,Nancy
+Employees,Title,object,10,Sales Representative
+Employees,TitleOfCourtesy,object,8,Ms.
+Employees,BirthDate,object,10,1948/12/08
+Employees,HireDate,object,10,1992-05-01 00:00:00.000
+Employees,Address,object,10,507 - 20th Ave. E.Apt. 2A
+Employees,City,object,10,Seattle
+Employees,Region,object,5,WA
+Employees,PostalCode,object,10,98122
+Employees,Country,object,10,USA
+Employees,HomePhone,object,10,(206) 555-9857
+Employees,Extension,int64,10,5467
+Employees,Photo,object,9,\u0015\u001c\/\u0000\u0002\u0000\u0000\u0000\r\u00
+Employees,Notes,object,7,Education includes a BA in psychology from Colorad
+Employees,ReportsTo,float64,9,2.0
+Employees,PhotoPath,object,9,http://accweb/emmployees/davolio.bmp
+Order_Details,OrderID,int64,2140,10248
+Order_Details,ProductID,int64,2140,11
+Order_Details,UnitPrice,float64,2140,14.0
+Order_Details,Quantity,float64,2140,12.0
+Order_Details,Discount,float64,2140,0.0
+Orders,OrderID,int64,835,10248
+Orders,CustomerID,object,835,VINET
+Orders,EmployeeID,int64,835,5
+Orders,OrderDate,object,835,04.07.1996
+Orders,RequiredDate,object,835,1996-08-01 00:00:00
+Orders,ShippedDate,object,800,1996-07-16 00:00:00
+Orders,ShipVia,int64,835,3
+Orders,Freight,float64,835,32.38
+Orders,ShipName,object,835,VINS ET ALCOOLS CHEVALIER
+Orders,ShipAddress,object,835,59 rue de l'Abbaye
+Orders,ShipCity,object,835,Reims
+Orders,ShipRegion,object,324,RJ
+Orders,ShipPostalCode,object,835,51100
+Orders,ShipCountry,object,835,France
+Products,ProductID,int64,78,1
+Products,ProductName,object,78,Chai
+Products,SupplierID,int64,78,1
+Products,CategoryID,int64,78,1
+Products,QuantityPerUnit,object,78,Unknown
+Products,UnitPrice,float64,78,18.0
+Products,UnitsInStock,int64,78,39
+Products,UnitsOnOrder,int64,78,0
+Products,ReorderLevel,int64,78,10
+Products,Discontinued,int64,78,0
+Region,RegionID,int64,4,1
+Region,RegionDescription,object,4,Eastern
+Shippers,ShipperID,int64,3,1
+Shippers,CompanyName,object,3,Speedy Express
+Shippers,Phone,object,3,(503) 555-9831
+Suppliers,SupplierID,int64,30,1
+Suppliers,CompanyName,object,30,EXOTIC LIQUIDS
+Suppliers,ContactName,object,26,Charlotte Cooper
+Suppliers,ContactTitle,object,30,Purchasing Manager
+Suppliers,Address,object,30,49 Gilbert St.
+Suppliers,City,object,30,London
+Suppliers,Region,object,9,LA
+Suppliers,PostalCode,object,30,EC1 4SD
+Suppliers,Country,object,30,United Kingdom
+Suppliers,Phone,object,30,(171) 555-2222
+Suppliers,Fax,object,9,(313) 555-3349
+Suppliers,HomePage,object,4,Mayumi's (on the World Wide Web)#http://www.micros
+Territories,TerritoryID,int64,55,1581
+Territories,TerritoryDescription,object,55,westboro
+Territories,RegionID,int64,55,1
