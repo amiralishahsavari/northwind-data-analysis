@@ -11,14 +11,14 @@ CustomerDemographics,CustomerDesc,object,0,N/A
 Customers,CustomerID,object,91,ALFKI
 Customers,CompanyName,object,91,alfreds futterkiste
 Customers,ContactName,object,91,Maria Anders
-Customers,ContactTitle,object,87,Sales Representative
+Customers,ContactTitle,object,91,Sales Representative
 Customers,Address,object,91,Obere Str. 57
 Customers,City,object,91,Berlin
-Customers,Region,object,31,BC
+Customers,Region,object,91,Unknown
 Customers,PostalCode,object,80,12209
 Customers,Country,object,91,Germany
 Customers,Phone,object,91,030-0074321
-Customers,Fax,object,61,030-0076545
+Customers,Fax,object,91,030-0076545
 EmployeeTerritories,EmployeeID,int64,51,1
 EmployeeTerritories,TerritoryID,int64,51,6897
 Employees,EmployeeID,int64,10,1
@@ -57,8 +57,9 @@ Orders,ShipName,object,835,VINS ET ALCOOLS CHEVALIER
 Orders,ShipAddress,object,835,59 rue de l'Abbaye
 Orders,ShipCity,object,835,Reims
 Orders,ShipRegion,object,835,Unknown
-Orders,ShipPostalCode,object,835,51100
+Orders,ShipPostalCode,object,816,51100
 Orders,ShipCountry,object,835,France
+Orders,has_ship_region,bool,835,False
 Orders,is_shipped,bool,835,True
 Products,ProductID,int64,78,1
 Products,ProductName,object,78,Chai
