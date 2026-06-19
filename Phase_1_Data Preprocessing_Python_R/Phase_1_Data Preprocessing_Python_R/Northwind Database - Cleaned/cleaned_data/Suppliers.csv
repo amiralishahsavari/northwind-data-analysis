@@ -1,31 +1,31 @@
 ﻿SupplierID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax,has_region,has_fax
-1,EXOTIC LIQUIDS,Charlotte Cooper,Purchasing Manager,49 Gilbert St.,London,Unknown,EC1 4SD,United Kingdom,(171) 555-2222,Not Provided,False,False
-2,NEW ORLEANS CAJUN DELIGHTS,Unknown Contact,Order Administrator,P.O. Box 78934,,LA,70117,USA,(100) 555-4822,Not Provided,True,False
-3,Grandma Kelly's Homestead,Unknown Contact,Sales Representative,707 Oxford Rd.,Ann Arbor,MI,48104,US,(313) 555-5735,(313) 555-3349,True,True
-4,TOKYO TRADERS,Yoshi Nagase,Marketing Manager,9-8 SEKIMAI MUSASHINO-SHI,Tokyo,Unknown,100,Japan,(03) 3555-5011,Not Provided,False,False
-5,Cooperativa de Quesos 'Las Cabras',antonio del valle saavedra,Export Administrator,Calle del Rosal 4,Oviedo,Asturias,33007,Spain,(98) 598 76 54,Not Provided,True,False
-6,Mayumi's,Unknown Contact,Marketing Representative,92 Setsuko Chuo-ku,Osaka,Unknown,545,Japan,(06) 431-7877,Not Provided,False,False
-7,"Pavlova, Ltd.",Ian Devling,Marketing Manager,74 Rose St. Moonie Ponds,Melbourne,Victoria,3058,Australia,(03) 444-2343,(03) 444-6588,True,True
-8,"SPECIALTY BISCUITS, LTD.",peter wilson,Sales Representative,29 king's way,Manchester,Unknown,M14 GSD,United Kingdom,(161) 555-4448,Not Provided,False,False
-9,PB Kn?ckebr?d AB,LARS PETERSON,Sales Agent,Kaloadagatan 13,G?teborg,Unknown,S-345 67,Sweden,031-987 65 43,Not Provided,False,False
-10,REFRESCOS AMERICANAS LTDA,Carlos Diaz,Marketing Manager,Av. das Americanas 12.890,Sao Paulo,Unknown,5442,Brazil,(11) 555 4640,Not Provided,False,False
-11,heli sü?waren gmbh & co. kg,Petra Winkler,Sales Manager,Tiergartenstra?e 5,Berlin,Unknown,10785,Gernany,(010) 9984510,Not Provided,False,False
-12,Plutzer Lebensmittelgro?m?rkte AG,Martin Bein,International Marketing Mgr.,Bogenallee 51,,Unknown,60439,Gernany,(069) 992755,Not Provided,False,False
-13,Nord-Ost-Fisch Handelsgesellschaft mbH,Sven Petersen,Coordinator Foreign Markets,frahmredder 112a,Cuxhaven,Unknown,27478,Germany,(04721) 8713,Not Provided,False,False
-14,Formaggi Fortini s.r.l.,Elio Rossi,Sales Representative,"viale dante, 75",,Unknown,48100,Italy,(0544) 60323,(0544) 60603,False,True
-15,Norske Meierier,beate vileid,Marketing Manager,Hatlevegen 5,Sandvika,Unknown,1320,Norway,(0)2-953010,Not Provided,False,False
-16,Bigfoot Breweries,Cheryl Saylor,Regional Account Rep.,3400 - 8th avenue suite 210,Bend,OR,97101,USA,(503) 555-9931,Not Provided,True,False
-17,Svensk Sj?f?da AB,Michael Bj?rn,Sales Representative,Brovallav?gen 231,,Unknown,S-123 45,Sweden,08-123 45 67,Not Provided,False,False
-18,AUX JOYEUX ECCLÉSIASTIQUES,,Sales Manager,"203, Rue des Francs-Bourgeois",Paris,Unknown,75004,Frnace,(1) 03.83.00.68,Not Provided,False,False
-19,New England Seafood Cannery,,Wholesale Account Agent,order processing dept. 2100 paul revere blvd.,Boston,MA,02134,US,(617) 555-3267,(617) 555-3389,True,True
-20,LEKA TRADING,Unknown Contact,Owner,"471 serangoon loop, suite #402",Singapore,Unknown,0512,Singapore,555-8787,Not Provided,False,False
-21,Lyngbysild,Niels Petersen,Sales Manager,Lyngbysild Fiskebakken 10,Lyngby,Unknown,2800,Denmark,43844108,43844115,False,True
-22,Zaanse Snoepfabriek,Dirk Luchte,Accounting Manager,Verkoop Rijnweg 22,Zaandam,Unknown,9999 ZZ,Netherlands,(12345) 1212,(12345) 1210,False,True
-23,Karkki Oy,Anne Heikkonen,Product Manager,valtakatu 12,Lappeenranta,Unknown,53120,Finland,(953) 10956,Not Provided,False,False
-24,"G'DAY, MATE",,Sales Representative,170 Prince Edward Parade Hunter's Hill,Sydney,NSW,2042,Australia,(02) 555-5914,Not Provided,True,False
-25,Ma Maison,jean-guy lauzon,Marketing Manager,2960 Rue St. Laurent,Montréal,Québec,H1J 1C3,Canada,(514) 555-9022,Not Provided,True,False
-26,Pasta Buttini s.r.l.,Giovanni Giudici,Order Administrator,"Via dei Gelsomini, 153",Salerno,Unknown,84100,Italy,(089) 6547665,(089) 6547667,False,True
-27,escargots nouveaux,Marie Delamare,Sales Manager,"22, RUE H. VOIRON",Montceau,Unknown,71300,Frnace,85.57.00.07,Not Provided,False,False
-28,Gai pâturage,Eliane Noz,Sales Representative,"Bat. B 3, rue des Alpes",Annecy,Unknown,74000,Frnace,38.76.98.06,38.76.98.58,False,True
-29,forêts d'érables,NAN,Accounting Manager,148 rue Chasseur,Ste-Hyacinthe,Québec,J2S 7S8,Canada,(514) 555-2955,(514) 555-2921,True,True
-20,leka trading,,Owner,"471 Serangoon Loop, Suite #402",Singapore,Unknown,0512,Singapore,555-8787,Not Provided,False,False
+1,exotic liquids,charlotte cooper,purchasing manager,49 gilbert st.,london,Unknown,ec1 4sd,united kingdom,(171) 555-2222,Not Provided,False,False
+2,new orleans cajun delights,Unknown Contact,order administrator,p.o. box 78934,,la,70117,usa,(100) 555-4822,Not Provided,True,False
+3,grandma kelly's homestead,Unknown Contact,sales representative,707 oxford rd.,ann arbor,mi,48104,us,(313) 555-5735,(313) 555-3349,True,True
+4,tokyo traders,yoshi nagase,marketing manager,9-8 sekimai musashino-shi,tokyo,Unknown,100,japan,(03) 3555-5011,Not Provided,False,False
+5,cooperativa de quesos 'las cabras',antonio del valle saavedra,export administrator,calle del rosal 4,oviedo,asturias,33007,spain,(98) 598 76 54,Not Provided,True,False
+6,mayumi's,Unknown Contact,marketing representative,92 setsuko chuo-ku,osaka,Unknown,545,japan,(06) 431-7877,Not Provided,False,False
+7,"pavlova, ltd.",ian devling,marketing manager,74 rose st. moonie ponds,melbourne,victoria,3058,australia,(03) 444-2343,(03) 444-6588,True,True
+8,"specialty biscuits, ltd.",peter wilson,sales representative,29 king's way,manchester,Unknown,m14 gsd,united kingdom,(161) 555-4448,Not Provided,False,False
+9,pb kn?ckebr?d ab,lars peterson,sales agent,kaloadagatan 13,g?teborg,Unknown,s-345 67,sweden,031-987 65 43,Not Provided,False,False
+10,refrescos americanas ltda,carlos diaz,marketing manager,av. das americanas 12.890,sao paulo,Unknown,5442,brazil,(11) 555 4640,Not Provided,False,False
+11,heli sü?waren gmbh & co. kg,petra winkler,sales manager,tiergartenstra?e 5,berlin,Unknown,10785,gernany,(010) 9984510,Not Provided,False,False
+12,plutzer lebensmittelgro?m?rkte ag,martin bein,international marketing mgr.,bogenallee 51,,Unknown,60439,gernany,(069) 992755,Not Provided,False,False
+13,nord-ost-fisch handelsgesellschaft mbh,sven petersen,coordinator foreign markets,frahmredder 112a,cuxhaven,Unknown,27478,germany,(04721) 8713,Not Provided,False,False
+14,formaggi fortini s.r.l.,elio rossi,sales representative,"viale dante, 75",,Unknown,48100,italy,(0544) 60323,(0544) 60603,False,True
+15,norske meierier,beate vileid,marketing manager,hatlevegen 5,sandvika,Unknown,1320,norway,(0)2-953010,Not Provided,False,False
+16,bigfoot breweries,cheryl saylor,regional account rep.,3400 - 8th avenue suite 210,bend,or,97101,usa,(503) 555-9931,Not Provided,True,False
+17,svensk sj?f?da ab,michael bj?rn,sales representative,brovallav?gen 231,,Unknown,s-123 45,sweden,08-123 45 67,Not Provided,False,False
+18,aux joyeux ecclésiastiques,,sales manager,"203, rue des francs-bourgeois",paris,Unknown,75004,frnace,(1) 03.83.00.68,Not Provided,False,False
+19,new england seafood cannery,,wholesale account agent,order processing dept. 2100 paul revere blvd.,boston,ma,02134,us,(617) 555-3267,(617) 555-3389,True,True
+20,leka trading,Unknown Contact,owner,"471 serangoon loop, suite #402",singapore,Unknown,0512,singapore,555-8787,Not Provided,False,False
+21,lyngbysild,niels petersen,sales manager,lyngbysild fiskebakken 10,lyngby,Unknown,2800,denmark,43844108,43844115,False,True
+22,zaanse snoepfabriek,dirk luchte,accounting manager,verkoop rijnweg 22,zaandam,Unknown,9999 zz,netherlands,(12345) 1212,(12345) 1210,False,True
+23,karkki oy,anne heikkonen,product manager,valtakatu 12,lappeenranta,Unknown,53120,finland,(953) 10956,Not Provided,False,False
+24,"g'day, mate",,sales representative,170 prince edward parade hunter's hill,sydney,nsw,2042,australia,(02) 555-5914,Not Provided,True,False
+25,ma maison,jean-guy lauzon,marketing manager,2960 rue st. laurent,montréal,québec,h1j 1c3,canada,(514) 555-9022,Not Provided,True,False
+26,pasta buttini s.r.l.,giovanni giudici,order administrator,"via dei gelsomini, 153",salerno,Unknown,84100,italy,(089) 6547665,(089) 6547667,False,True
+27,escargots nouveaux,marie delamare,sales manager,"22, rue h. voiron",montceau,Unknown,71300,frnace,85.57.00.07,Not Provided,False,False
+28,gai pâturage,eliane noz,sales representative,"bat. b 3, rue des alpes",annecy,Unknown,74000,frnace,38.76.98.06,38.76.98.58,False,True
+29,forêts d'érables,,accounting manager,148 rue chasseur,ste-hyacinthe,québec,j2s 7s8,canada,(514) 555-2955,(514) 555-2921,True,True
+20,leka trading,,owner,"471 serangoon loop, suite #402",singapore,Unknown,0512,singapore,555-8787,Not Provided,False,False

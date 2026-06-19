@@ -1,56 +1,56 @@
 TerritoryID,TerritoryDescription,RegionID
 1581,westboro,1
-1730,Bedford,1
-1833,Georgetow,1
-2116,BOSTON,1
-2139,Cambridge,1
-2184,Braintree,1
-2903,Providence,1
-3049,Hollis,3
-3801,Portsmouth,3
-6897,Wilton,1
-7960,Morristown,1
+1730,bedford,1
+1833,georgetow,1
+2116,boston,1
+2139,cambridge,1
+2184,braintree,1
+2903,providence,1
+3049,hollis,3
+3801,portsmouth,3
+6897,wilton,1
+7960,morristown,1
 8837,edison,1
-10019,New York,1
-10038,New York,1
-11747,Mellvile,1
-14450,Fairport,1
-19428,Philadelphia,3
-19713,Neward,1
-20852,ROCKVILLE,1
-27403,Greensboro,1
+10019,new york,1
+10038,new york,1
+11747,mellvile,1
+14450,fairport,1
+19428,philadelphia,3
+19713,neward,1
+20852,rockville,1
+27403,greensboro,1
 27511,cary,1
-29202,Columbia,4
-30346,Atlanta,4
-31406,Savannah,4
-32859,Orlando,4
-33607,Tampa,4
-40222,Louisville,1
-44122,Beachwood,3
-45839,Findlay,3
-48075,Southfield,3
+29202,columbia,4
+30346,atlanta,4
+31406,savannah,4
+32859,orlando,4
+33607,tampa,4
+40222,louisville,1
+44122,beachwood,3
+45839,findlay,3
+48075,southfield,3
 48084,troy,3
 48304,bloomfield hills,3
-53404,RACINE,3
-55113,Roseville,3
-55439,Minneapolis,3
-60179,Hoffman Estates,2
-60601,CHICAGO,2
-72716,BENTONVILLE,4
-75234,Dallas,4
-78759,Austin,4
-80202,Denver,2
-80909,Colorado Springs,2
-85014,Phoenix,2
-85251,Scottsdale,2
-90405,Santa Monica,2
-94025,Menlo Park,2
-94105,San Francisco,2
-95008,Campbell,2
-95054,Santa Clara,2
-95060,SANTA CRUZ,2
-98004,Bellevue,2
-98052,REDMOND,2
-98104,Seattle,2
-99999,FAKE TERRITORY,5
-88888,Nowhere,0
+53404,racine,3
+55113,roseville,3
+55439,minneapolis,3
+60179,hoffman estates,2
+60601,chicago,2
+72716,bentonville,4
+75234,dallas,4
+78759,austin,4
+80202,denver,2
+80909,colorado springs,2
+85014,phoenix,2
+85251,scottsdale,2
+90405,santa monica,2
+94025,menlo park,2
+94105,san francisco,2
+95008,campbell,2
+95054,santa clara,2
+95060,santa cruz,2
+98004,bellevue,2
+98052,redmond,2
+98104,seattle,2
+99999,fake territory,5
+88888,nowhere,0
