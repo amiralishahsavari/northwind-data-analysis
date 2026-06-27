@@ -1,79 +1,79 @@
-ProductID,ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued
-1,chai,1,1,Not specified,18.0,39,0,10,0
-2,chang,1,1,24 - 12 oz bottles,19.0,17,40,25,0
-3,aniseed syrup,1,2,12 - 550 ml bottles,10.0,13,70,25,0
-4,chef anton's cajun seasoning,2,2,48 - 6 oz jars,22.0,53,0,0,0
-5,chef anton's gumbo mix,2,2,Not specified,576.45,0,0,0,1
-6,grandma's boysenberry spread,3,2,12 - 8 oz jars,25.0,120,0,25,0
-7,uncle bob's organic dried pears,3,7,12 - 1 lb pkgs.,30.0,15,0,10,0
-8,northwoods cranberry sauce,3,2,12 - 12 oz jars,40.0,6,0,0,0
-9,mishi kobe niku,4,6,Not specified,97.0,29,0,0,1
-10,ikura,4,8,12 - 200 ml jars,31.0,31,0,0,0
-11,queso cabrales,5,4,1 kg pkg.,21.0,22,30,30,0
-12,queso manchego la pastora,5,4,10 - 500 g pkgs.,38.0,86,0,0,0
-13,konbu,6,8,2 kg box,240.0,24,0,5,0
-14,tofu,6,7,40 - 100 g pkgs.,23.25,-35,0,0,0
-15,genen shouyu,6,2,Not specified,15.5,39,0,5,0
-16,pavlova,7,3,Not specified,17.45,29,0,10,0
-17,alice mutton,7,6,20 - 1 kg tins,39.0,0,0,0,1
-18,carnarvon tigers,7,8,16 kg pkg.,62.5,42,0,0,0
-19,teatime chocolate biscuits,8,3,Not specified,9.2,25,0,5,0
-20,sir rodney's marmalade,8,3,30 gift boxes,81.0,40,0,0,0
-21,sir rodney's scones,8,3,24 pkgs. x 4 pieces,10.0,3,40,5,0
-22,gustaf's kn?ckebr?d,9,5,24 - 500 g pkgs.,21.0,104,0,25,0
-23,tunnbr?d,9,5,Not specified,9.0,61,0,25,0
-24,guaran? fant?stica,10,1,Not specified,4.5,20,0,0,1
-25,nunuca nu?-nougat-creme,11,3,20 - 450 g glasses,14.0,76,0,30,0
-26,gumb?r gummib?rchen,11,3,100 - 250 g bags,31.23,15,0,0,0
-27,schoggi schokolade,11,3,100 - 100 g pieces,43.9,49,0,30,0
-28,r?ssle sauerkraut,12,7,25 - 825 g cans,45.6,26,0,0,1
-29,thüringer rostbratwurst,12,6,50 bags x 30 sausgs.,123.79,0,0,0,1
-30,nord-ost matjeshering,13,8,10 - 200 g glasses,25.89,10,0,15,0
-31,gorgonzola telino,14,4,12 - 100 g pkgs,12.5,0,70,20,0
-32,mascarpone fabioli,14,4,24 - 200 g pkgs.,32.0,9,40,25,0
-33,geitost,15,4,500 g,2.5,112,0,20,0
-34,sasquatch ale,16,1,Not specified,14.0,111,0,15,0
-35,steeleye stout,16,1,24 - 12 oz bottles,18.0,20,0,15,0
-36,inlagd sill,17,8,Not specified,19.0,112,0,20,0
-37,gravad lax,17,8,12 - 500 g pkgs.,26.0,11,50,25,0
-38,côte de blaye,18,1,12 - 75 cl bottles,263.5,17,0,15,0
-39,chartreuse verte,18,1,Not specified,18.0,69,0,5,0
-40,boston crab meat,19,8,24 - 4 oz tins,18.4,123,0,30,0
-41,jack's new england clam chowder,19,8,12 - 12 oz cans,9.65,85,0,10,0
-42,singaporean hokkien fried mee,20,5,32 - 1 kg pkgs.,14.0,26,0,0,1
-43,ipoh coffee,20,1,Not specified,46.0,17,10,25,0
-44,gula malacca,20,2,20 - 2 kg bags,19.45,27,0,15,0
-45,rogede sild,21,8,Not specified,9.5,5,70,15,0
-46,spegesild,21,8,Not specified,12.0,95,0,0,0
-47,zaanse koeken,22,3,Not specified,9.5,36,0,0,0
-48,chocolade,22,3,Not specified,12.75,15,70,25,0
-49,maxilaku,23,3,24 - 50 g pkgs.,20.0,10,60,15,0
-50,valkoinen suklaa,23,3,12 - 100 g bars,16.25,65,0,30,0
-51,manjimup dried apples,24,7,50 - 300 g pkgs.,53.0,20,0,10,0
-52,filo mix,24,5,16 - 2 kg boxes,7.0,38,0,25,0
-53,perth pasties,24,6,Not specified,32.8,0,0,0,1
-54,tourtière,25,6,16 pies,7.45,21,0,10,0
-55,pâté chinois,25,6,Not specified,24.0,115,0,20,0
-56,gnocchi di nonna alice,26,5,24 - 250 g pkgs.,38.0,-21,10,30,0
-57,ravioli angelo,26,5,24 - 250 g pkgs.,19.5,36,0,20,0
-58,escargots de bourgogne,27,8,Not specified,583.0,62,0,20,0
-59,raclette courdavault,28,4,5 kg pkg.,55.0,79,0,0,0
-60,camembert pierrot,28,4,Not specified,34.0,19,0,0,0
-61,sirop d'érable,29,2,24 - 500 ml bottles,28.5,113,0,25,0
-62,tarte au sucre,29,3,Not specified,353.0,17,0,0,0
-63,vegie-spread,7,2,15 - 625 g jars,43.9,24,0,5,0
-64,wimmers gute semmelkn?del,12,5,Not specified,33.25,-22,80,30,0
-65,louisiana fiery hot pepper sauce,2,2,32 - 8 oz bottles,21.05,76,0,0,0
-66,louisiana hot spiced okra,2,2,24 - 8 oz jars,17.0,4,100,20,0
-67,laughing lumberjack lager,16,1,24 - 12 oz bottles,14.0,52,0,10,0
-68,scottish longbreads,8,3,10 boxes x 8 pieces,12.5,6,-10,15,0
-69,gudbrandsdalsost,15,4,10 kg pkg.,36.0,26,0,15,0
-70,outback lager,7,1,24 - 355 ml bottles,15.0,15,10,30,0
-71,flotemysost,15,4,Not specified,21.5,26,0,0,0
-72,mozzarella di giovanni,14,4,Not specified,34.8,14,0,0,0
-73,r?d kaviar,17,8,24 - 150 g jars,15.0,101,0,5,0
-74,longlife tofu,4,7,5 kg pkg.,10.0,4,20,5,0
-75,rh?nbr?u klosterbier,12,1,24 - 0.5 l bottles,7.75,125,0,25,0
-76,lakkalik??ri,23,1,Not specified,18.0,57,0,20,0
-77,original frankfurter grüne so?e,12,2,12 boxes,13.0,32,0,15,0
-1,chai,1,99,Not specified,18.0,39,0,10,0
+ProductID,ProductName,SupplierID,CategoryID,QuantityPerUnit,UnitPrice,UnitsInStock,UnitsOnOrder,ReorderLevel,Discontinued,PriceCategory
+1,Chai,1,1,Not Specified,18.0,39,0,10,0,Medium
+2,Chang,1,1,24 - 12 Oz Bottles,19.0,17,40,25,0,Medium
+3,Aniseed Syrup,1,2,12 - 550 Ml Bottles,10.0,13,70,25,0,Low
+4,Chef Anton'S Cajun Seasoning,2,2,48 - 6 Oz Jars,22.0,53,0,0,0,Medium
+5,Chef Anton'S Gumbo Mix,2,2,Not Specified,576.45,0,0,0,1,High
+6,Grandma'S Boysenberry Spread,3,2,12 - 8 Oz Jars,25.0,120,0,25,0,Medium
+7,Uncle Bob'S Organic Dried Pears,3,7,12 - 1 Lb Pkgs.,30.0,15,0,10,0,Medium
+8,Northwoods Cranberry Sauce,3,2,12 - 12 Oz Jars,40.0,6,0,0,0,High
+9,Mishi Kobe Niku,4,6,Not Specified,97.0,29,0,0,1,High
+10,Ikura,4,8,12 - 200 Ml Jars,31.0,31,0,0,0,Medium
+11,Queso Cabrales,5,4,1 Kg Pkg.,21.0,22,30,30,0,Medium
+12,Queso Manchego La Pastora,5,4,10 - 500 G Pkgs.,38.0,86,0,0,0,High
+13,Konbu,6,8,2 Kg Box,240.0,24,0,5,0,High
+14,Tofu,6,7,40 - 100 G Pkgs.,23.25,-35,0,0,0,Medium
+15,Genen Shouyu,6,2,Not Specified,15.5,39,0,5,0,Low
+16,Pavlova,7,3,Not Specified,17.45,29,0,10,0,Medium
+17,Alice Mutton,7,6,20 - 1 Kg Tins,39.0,0,0,0,1,High
+18,Carnarvon Tigers,7,8,16 Kg Pkg.,62.5,42,0,0,0,High
+19,Teatime Chocolate Biscuits,8,3,Not Specified,9.2,25,0,5,0,Low
+20,Sir Rodney'S Marmalade,8,3,30 Gift Boxes,81.0,40,0,0,0,High
+21,Sir Rodney'S Scones,8,3,24 Pkgs. X 4 Pieces,10.0,3,40,5,0,Low
+22,Gustaf'S Kn?Ckebr?D,9,5,24 - 500 G Pkgs.,21.0,104,0,25,0,Medium
+23,Tunnbr?D,9,5,Not Specified,9.0,61,0,25,0,Low
+24,Guaran? Fant?Stica,10,1,Not Specified,4.5,20,0,0,1,Low
+25,Nunuca Nu?-Nougat-Creme,11,3,20 - 450 G Glasses,14.0,76,0,30,0,Low
+26,Gumb?R Gummib?Rchen,11,3,100 - 250 G Bags,31.23,15,0,0,0,High
+27,Schoggi Schokolade,11,3,100 - 100 G Pieces,43.9,49,0,30,0,High
+28,R?Ssle Sauerkraut,12,7,25 - 825 G Cans,45.6,26,0,0,1,High
+29,Thüringer Rostbratwurst,12,6,50 Bags X 30 Sausgs.,123.79,0,0,0,1,High
+30,Nord-Ost Matjeshering,13,8,10 - 200 G Glasses,25.89,10,0,15,0,Medium
+31,Gorgonzola Telino,14,4,12 - 100 G Pkgs,12.5,0,70,20,0,Low
+32,Mascarpone Fabioli,14,4,24 - 200 G Pkgs.,32.0,9,40,25,0,High
+33,Geitost,15,4,500 G,2.5,112,0,20,0,Low
+34,Sasquatch Ale,16,1,Not Specified,14.0,111,0,15,0,Low
+35,Steeleye Stout,16,1,24 - 12 Oz Bottles,18.0,20,0,15,0,Medium
+36,Inlagd Sill,17,8,Not Specified,19.0,112,0,20,0,Medium
+37,Gravad Lax,17,8,12 - 500 G Pkgs.,26.0,11,50,25,0,Medium
+38,Côte De Blaye,18,1,12 - 75 Cl Bottles,263.5,17,0,15,0,High
+39,Chartreuse Verte,18,1,Not Specified,18.0,69,0,5,0,Medium
+40,Boston Crab Meat,19,8,24 - 4 Oz Tins,18.4,123,0,30,0,Medium
+41,Jack'S New England Clam Chowder,19,8,12 - 12 Oz Cans,9.65,85,0,10,0,Low
+42,Singaporean Hokkien Fried Mee,20,5,32 - 1 Kg Pkgs.,14.0,26,0,0,1,Low
+43,Ipoh Coffee,20,1,Not Specified,46.0,17,10,25,0,High
+44,Gula Malacca,20,2,20 - 2 Kg Bags,19.45,27,0,15,0,Medium
+45,Rogede Sild,21,8,Not Specified,9.5,5,70,15,0,Low
+46,Spegesild,21,8,Not Specified,12.0,95,0,0,0,Low
+47,Zaanse Koeken,22,3,Not Specified,9.5,36,0,0,0,Low
+48,Chocolade,22,3,Not Specified,12.75,15,70,25,0,Low
+49,Maxilaku,23,3,24 - 50 G Pkgs.,20.0,10,60,15,0,Medium
+50,Valkoinen Suklaa,23,3,12 - 100 G Bars,16.25,65,0,30,0,Low
+51,Manjimup Dried Apples,24,7,50 - 300 G Pkgs.,53.0,20,0,10,0,High
+52,Filo Mix,24,5,16 - 2 Kg Boxes,7.0,38,0,25,0,Low
+53,Perth Pasties,24,6,Not Specified,32.8,0,0,0,1,High
+54,Tourtière,25,6,16 Pies,7.45,21,0,10,0,Low
+55,Pâté Chinois,25,6,Not Specified,24.0,115,0,20,0,Medium
+56,Gnocchi Di Nonna Alice,26,5,24 - 250 G Pkgs.,38.0,-21,10,30,0,High
+57,Ravioli Angelo,26,5,24 - 250 G Pkgs.,19.5,36,0,20,0,Medium
+58,Escargots De Bourgogne,27,8,Not Specified,583.0,62,0,20,0,High
+59,Raclette Courdavault,28,4,5 Kg Pkg.,55.0,79,0,0,0,High
+60,Camembert Pierrot,28,4,Not Specified,34.0,19,0,0,0,High
+61,Sirop D'Érable,29,2,24 - 500 Ml Bottles,28.5,113,0,25,0,Medium
+62,Tarte Au Sucre,29,3,Not Specified,353.0,17,0,0,0,High
+63,Vegie-Spread,7,2,15 - 625 G Jars,43.9,24,0,5,0,High
+64,Wimmers Gute Semmelkn?Del,12,5,Not Specified,33.25,-22,80,30,0,High
+65,Louisiana Fiery Hot Pepper Sauce,2,2,32 - 8 Oz Bottles,21.05,76,0,0,0,Medium
+66,Louisiana Hot Spiced Okra,2,2,24 - 8 Oz Jars,17.0,4,100,20,0,Medium
+67,Laughing Lumberjack Lager,16,1,24 - 12 Oz Bottles,14.0,52,0,10,0,Low
+68,Scottish Longbreads,8,3,10 Boxes X 8 Pieces,12.5,6,-10,15,0,Low
+69,Gudbrandsdalsost,15,4,10 Kg Pkg.,36.0,26,0,15,0,High
+70,Outback Lager,7,1,24 - 355 Ml Bottles,15.0,15,10,30,0,Low
+71,Flotemysost,15,4,Not Specified,21.5,26,0,0,0,Medium
+72,Mozzarella Di Giovanni,14,4,Not Specified,34.8,14,0,0,0,High
+73,R?D Kaviar,17,8,24 - 150 G Jars,15.0,101,0,5,0,Low
+74,Longlife Tofu,4,7,5 Kg Pkg.,10.0,4,20,5,0,Low
+75,Rh?Nbr?U Klosterbier,12,1,24 - 0.5 L Bottles,7.75,125,0,25,0,Low
+76,Lakkalik??Ri,23,1,Not Specified,18.0,57,0,20,0,Medium
+77,Original Frankfurter Grüne So?E,12,2,12 Boxes,13.0,32,0,15,0,Low
+1,Chai,1,99,Not Specified,18.0,39,0,10,0,Medium
