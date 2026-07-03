@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}فاز صفر}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}تحلیل مدل کسب‌وکار پایگاه داده نورث‌ویند}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}ماهیت کسب‌وکار و ساختار سازمان‌به‌سازمان}{1}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}نوع محصولات و زنجیره تأمین بین‌المللی}{1}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}ارکان اصلی سیستم}{1}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}چرخه عملیاتی کسب‌وکار}{2}{subsubsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.2}ساختار معماری داده‌ها و ارتباطات}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}تعریف شاخص‌های کلیدی عملکرد}{3}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}حوزه فروش و درآمد}{3}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}حوزه عملیات و لجستیک}{3}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}حوزه مشتریان و کارکنان}{4}{subsubsection.1.3.3}%

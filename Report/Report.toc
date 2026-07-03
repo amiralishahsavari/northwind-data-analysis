@@ -1,0 +1,36 @@
+\contentsline {section}{\numberline {1}فاز صفر}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}تحلیل مدل کسب‌وکار پایگاه داده نورث‌ویند}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}ماهیت کسب‌وکار و ساختار سازمان‌به‌سازمان}{1}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}نوع محصولات و زنجیره تأمین بین‌المللی}{1}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}ارکان اصلی سیستم}{1}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}چرخه عملیاتی کسب‌وکار}{2}{subsubsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.2}ساختار معماری داده‌ها و ارتباطات}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}تعریف شاخص‌های کلیدی عملکرد}{3}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}حوزه فروش و درآمد}{3}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}حوزه عملیات و لجستیک}{3}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}حوزه مشتریان و کارکنان}{4}{subsubsection.1.3.3}%
+\contentsline {section}{\numberline {2}فاز اول}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}پیش‌پردازش و پاک‌سازی داده‌ها}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}مهندسی ویژگی‌ها و آماده‌سازی جهت تحلیل}{13}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}ﺷﻨﺎﺳﺎﻳﻲ ﻭ ﻣﺪﻳﺮﻳﺖ ﺩﺍﺩﻩ ﻫﺎﻱ ﭘﺮﺕ}{16}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}ﺍﻋﺘﺒﺎﺭﺳﻨﺠﻲ ﺩﺍﺩﻩ ﻫﺎ}{20}{subsection.2.4}%
+\contentsline {section}{\numberline {3}فاز دوم}{25}{section.3}%
+\contentsline {subsection}{\numberline {3.1}اعتبارسنجی داده‌ها}{25}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}پاک‌سازی و تبدیل داده‌ها با ابزار کوئری‌سازی}{27}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}مدل‌سازی و تحلیل داده‌ها}{30}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}ﻧﻤﺎﻳﺶ ﻣﻘﺪﺍﺭ ﺳﻔﺎﺭﺵ ﺟﺪﻳﺪ ﺑﺮﺍﻱ ﻫﺮ ﺩﺳﺘﻪ ﺑﻨﺪﻱ ﺩﺭ ﺟﺪﻭﻝ ﻣﺤﻮﺭﻱ}{30}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}ﺗﺤﻠﻴﻞ ﻫﺰﻳﻨﻪ ﺣﻤﻞ ﺑﻪ ﺗﻔﻜﻴﻚ ﻛﺸﻮﺭ ﻭ ﺷﺮﻛﺖ ﺣﻤﻞ ﻭ ﻧﻘﻞ ﻫﻤﺮﺍﻩ ﺑﺎ ﻧﻤﻮﺩﺍﺭ}{30}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3} ﺗﺤﻠﻴﻞ ﺗﻘﺎﺿﺎ ﻭ ﻗﻴﻤﺖ ﻭﺍﺣﺪ ﻛﺎﻻ ﻭ ﻧﻤﺎﻳﺶ ﺑﺼﺮﻱ ﻣﻘﺪﺍﺭ ﻓﺮﻭﺵ ﻫﺮ ﻛﺎﻻ}{31}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}ﺗﺤﻠﻴﻞ ﺍﺭﺯﺵ ﻛﻞ ﻣﻮﺟﻮﺩﻱ ﺍﻧﺒﺎﺭ ﺑﻪ ﺗﻔﻜﻴﻚ ﺗﺄﻣﻴﻦ ﻛﻨﻨﺪﮔﺎﻥ}{31}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}ﺗﺤﻠﻴﻞ ﺩﺭﺁﻣﺪ ﻛﻞ ﺷﺮﻛﺖ ﺑﻪ ﺗﻔﻜﻴﻚ ﻛﺸﻮﺭ ﻣﻘﺼﺪ ﺑﺎ ﺍﺳﺘﻔﺎﺩﻩ ﺍﺯ ﺑﺮﺵ ﮔﺮ ﻭ ﻧﻤﻮﺩﺍﺭ}{32}{subsubsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.4}خودکارسازی با ماکرو و برنامه‌نویسی}{33}{subsection.3.4}%
+\contentsline {section}{\numberline {4}فاز سوم}{35}{section.4}%
+\contentsline {subsection}{\numberline {4.1}طراحی جداول و روابط}{35}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}طراحی کوئری‌ها}{36}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}نشان دادن ﻧﺎﻡ ﻣﺤﺼﻮﻝ ﻭ ﻗﻴﻤﺖ ﻧﻬﺎﻳﻲ ﺁﻥ ﭘﺲ ﺍﺯ ﺍﻋﻤﺎﻝ ﺗﺨﻔﻴﻒ }{36}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}نشان دادن ﻧﺎﻡ ﻫﺮ ﻣﺤﺼﻮﻝ ﺑﻪ ﻫﻤﺮﺍﻩ ﺗﻌﺪﺍﺩ ﻛﻞ ﺳﻔﺎﺭﺵ ها}{37}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}نشان دادن ﻧﺎﻡ ﻫﺮ ﻛﺎﺭﻣﻨﺪ ﺑﻪ ﻫﻤﺮﺍﻩ ﺗﻌﺪﺍﺩ ﻛﻞ ﺳﻔﺎﺭﺵ ها توسط او}{37}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}طراحی فرم‌های پایگاه داده}{38}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}طراحی گزارش‌های مدیریتی و تحلیلی}{42}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}گزارش عملکرد و ارزش‌گذاری گروه‌های کالایی}{42}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}گزارش تحلیل رفتار خرید مشتریان}{44}{subsubsection.4.4.2}%

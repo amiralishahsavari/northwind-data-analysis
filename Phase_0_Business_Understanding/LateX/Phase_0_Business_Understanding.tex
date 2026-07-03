@@ -1,0 +1,312 @@
+\documentclass[14pt,a4paper]{extarticle}
+
+% --------------- فراخوانی بسته‌ها --------------- %
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{eso-pic}
+\usetikzlibrary{calc}
+\usepackage{setspace}
+\usepackage{tocloft}
+\usepackage{float}
+\usepackage[bottom]{footmisc}
+\usepackage{perpage}
+\MakePerPage{footnote}
+\usepackage{caption}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{listingsutf8}
+
+\definecolor{bg}{RGB}{35,35,35}
+\definecolor{codewhite}{RGB}{245,245,245}
+
+\definecolor{vscodebg}{RGB}{30,30,30}
+\definecolor{vscodetext}{RGB}{220,220,220}
+\definecolor{vscodegreen}{RGB}{106,153,85}
+\definecolor{vscodeblue}{RGB}{86,156,214}
+\definecolor{vscodeorange}{RGB}{206,145,120}
+
+\lstdefinestyle{vscode}{
+	backgroundcolor=\color{vscodebg},
+	basicstyle=\ttfamily\footnotesize\color{vscodetext},
+	keywordstyle=\color{vscodeblue},
+	commentstyle=\color{vscodegreen},
+	stringstyle=\color{vscodeorange},
+	frame=single,
+	rulecolor=\color{black},
+	breaklines=true,
+	columns=fullflexible,
+	showstringspaces=false,
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	xleftmargin=0em,
+	framexleftmargin=0em
+}
+
+\lstset{style=vscode}
+\usepackage[
+colorlinks=true,
+linkcolor=blue,
+urlcolor=blue,
+citecolor=blue
+]{hyperref}
+
+
+% بسته زی‌پرشین باید حتما آخرین بسته باشد
+\usepackage{xepersian}
+% --------------- تنظیمات فونت --------------- %
+\settextfont{B Nazanin}
+\setlatintextfont{Times New Roman}
+% تنظیم سایز پانویس‌ها به 10pt
+\renewcommand{\footnotesize}{\fontsize{10pt}{13pt}\selectfont}
+
+\renewcommand{\labelitemi}{$\bullet$}
+\renewcommand{\labelitemii}{$\circ$}
+
+\captionsetup{font=footnotesize}
+
+% اندازه عناوین در فهرست% اندازه عناوین در فهرست
+\renewcommand{\cftsecfont}{\bfseries\fontsize{18pt}{19pt}\selectfont}
+\renewcommand{\cftsubsecfont}{\fontsize{14pt}{16pt}\selectfont}
+\renewcommand{\cftsubsubsecfont}{\fontsize{12pt}{14pt}\selectfont}
+
+% شماره صفحات فهرست
+\renewcommand{\cftsecpagefont}{\bfseries}
+
+\begin{document}
+	
+	% ------------------- کادر دور صفحه ------------------- %
+	\AddToShipoutPictureBG{
+		\begin{tikzpicture}[remember picture,overlay]
+			\draw[line width=1pt]
+			($(current page.north west)+(1cm,-1cm)$)
+			rectangle
+			($(current page.south east)+(-1cm,1cm)$);
+		\end{tikzpicture}
+	}
+	
+	% ------------------- صفحه عنوان ------------------- %
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{0.7cm}
+			
+			% مطمئن شوید عکس Logo در پوشه فایل لاتک موجود باشد
+			\includegraphics[width=4cm]{Logo}
+			
+			\vspace{0.8cm}
+			
+			{\fontsize{20pt}{24pt}\selectfont\bfseries دانشگاه صنعتی شریف}
+			
+			\vspace{0.4cm}
+			
+			{\fontsize{16pt}{20pt}\selectfont دانشکده مهندسی صنایع}
+			
+			\vspace{2cm}
+			
+			{\fontsize{15pt}{19pt}\selectfont درس: فناوری اطلاعات (21776)}
+			
+			\vspace{0.3cm}
+			
+			{\fontsize{15pt}{19pt}\selectfont نیمسال دوم سال تحصیلی ۱۴۰۴- ۱۴۰۵}
+			
+			\vspace{2cm}
+			\hrule height 1.5pt 
+			\vspace{0.6cm}
+			{\fontsize{24pt}{30pt}\selectfont\bfseries گزارش فاز صفر}
+			\vspace{0.6cm}
+			\hrule height 1.5pt 
+			\vspace{2cm}
+			
+			{\fontsize{17pt}{21pt}\selectfont استاد: سرکار خانم دکتر مریم بستان‌آرا}
+			
+			\vspace{1.5cm}
+			
+			{\fontsize{17pt}{21pt}\selectfont نگارش:}
+			
+			\vspace{0.8cm}
+			
+			\fontsize{14pt}{20pt}\selectfont
+			\begin{tabular}{r l}
+				رامتین فلاح: & 403104691 \\[0.5cm]
+				امیرعلی شهسواری: & 403104548 \\[0.5cm]
+				امیرعلی زلیکانی: & 403104442
+			\end{tabular}
+			
+			\vfill
+			\vspace{0.5cm}
+			{\fontsize{12pt}{16pt}\selectfont تیر ۱۴۰۵}
+			
+		\end{center}
+	\end{titlepage}
+	
+	% ------------------- فهرست مطالب ------------------- %
+	\pagenumbering{gobble}
+	
+	\begin{spacing}{1.5}
+		\tableofcontents
+	\end{spacing}
+	
+	\clearpage
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+
+	% ------------------- متن اصلی ------------------- %
+	\section{فاز صفر}
+	\subsection{تحلیل مدل کسب‌وکار پایگاه داده نورث‌ویند}
+	
+	بررسی دقیق ساختار جداول و داده‌های پایگاه داده نورث‌ویند\LTRfootnote{Northwind Database} نشان می‌دهد که این سیستم متعلق به یک شرکت عمده‌فروش و توزیع‌کننده بین‌المللی در صنعت مواد غذایی است. ابعاد مختلف این مدل کسب‌وکار به شرح زیر است:
+	
+	\subsubsection{ماهیت کسب‌وکار و ساختار سازمان‌به‌سازمان}
+	شرکت نورث‌ویند تولیدکننده نیست، بلکه به‌عنوان یک پل ارتباطی در زنجیره تأمین عمل می‌کند. بررسی اطلاعات جدول مشتریان\LTRfootnote{Customers.csv} نشان‌دهنده یک ساختار کاملاً تجاری و سازمان‌به‌سازمان\LTRfootnote{B2B (Business-to-Business)} است؛ وجود فیلدهایی نظیر ساختار حقوقی، نام شرکت‌ها و شماره نمابر\LTRfootnote{Fax} برای اکثر مشتریان، اثبات می‌کند که خریداران این شرکت مصرف‌کنندگان نهایی نیستند.
+	
+	\subsubsection{نوع محصولات و زنجیره تأمین بین‌المللی}
+	محصولات ثبت‌شده در جداول دسته‌بندی‌ها\LTRfootnote{Categories.csv} و محصولات\LTRfootnote{Products.csv} تماماً اقلام خوراکی و سوپرمارکتی هستند. داده‌های مکانی نشان می‌دهد که شرکت این محصولات را از تأمین‌کنندگان در کشورهای مختلف خریداری کرده و به دست مشتریانی در سراسر جهان می‌رساند که نشان‌دهنده یک شبکه گسترده و بین‌المللی لجستیک و تأمین است.
+	
+	\subsubsection{ارکان اصلی سیستم}
+	این مدل کسب‌وکار بر پنج رکن اصلی\LTRfootnote{Core Entities} استوار است:
+	
+	\begin{itemize}
+		\item \textbf{تأمین‌کنندگان\LTRfootnote{Suppliers}:} شرکت‌ها و تولیدکنندگان بین‌المللی که موجودی کالاهای نورث‌ویند را تأمین می‌کنند.
+		
+		\item \textbf{مشتریان\LTRfootnote{Customers}:} شرکت‌ها و خریداران تجاری در مناطق جغرافیایی گوناگون که دریافت‌کننده نهایی کالاها هستند.
+		
+		\item \textbf{شرکت‌های حمل‌ونقل\LTRfootnote{Shippers}:} شرکای لجستیکی واسط که وظیفه انتقال فیزیکی کالا از انبارها به آدرس مشتریان را بر عهده دارند.
+		
+		\item \textbf{کارکنان\LTRfootnote{Employees}:} تیم فروش و مدیریت که مسئولیت رسیدگی به مشتریان و ثبت سفارش‌ها را در مناطق جغرافیایی مشخص\LTRfootnote{Territories} بر عهده دارند.
+		
+		\item \textbf{محصولات و دسته‌بندی‌ها:} هسته اصلی تراکنش‌ها که شامل کاتالوگ کالاهای قابل فروش و گروه‌بندی آن‌ها می‌شود.
+	\end{itemize}
+	
+	\subsubsection{چرخه عملیاتی کسب‌وکار}
+	چرخه فعالیت در این شرکت از تأمین موجودی\LTRfootnote{Inventory} آغاز می‌شود؛ کالاها توسط تأمین‌کنندگان وارد سیستم شده و در دسته‌بندی‌های مشخص با قیمت‌گذاری معین ثبت می‌شوند. در مرحله بعد، مشتریان از طریق تیم فروش سفارش‌های\LTRfootnote{Orders} خود را ثبت می‌کنند. سیستم، جزئیات هر سفارش شامل نوع کالا، تعداد و تخفیف‌های اعمال‌شده را پردازش کرده و در نهایت، محموله برای بسته‌بندی و ارسال به شرکت‌های حمل‌ونقل واگذار می‌شود تا کالا به دست مشتری نهایی برسد. این فرآیند، چرخه عملیاتی\LTRfootnote{Activity Cycle} کامل شرکت را تشکیل می‌دهد.
+	
+	% ------------------- بخش جدید جدول ------------------- %
+	
+	\subsection{ساختار معماری داده‌ها و ارتباطات}
+	
+	در جدول زیر، ساختار معماری داده‌ها، کلیدهای اصلی و خارجی، و ارتباطات بین جداول پایگاه داده نورث‌ویند شرح داده شده است:
+	
+	\vspace{0.5cm}
+	
+\begin{table}[htbp]
+	\centering
+	\renewcommand{\arraystretch}{1.5} % افزایش فاصله ردیف‌ها برای خوانایی بهتر
+	\small
+	\resizebox{\textwidth}{!}{% تغییر اندازه جدول برای جا شدن در عرض صفحه
+		\begin{tabular}{|l|l|l|p{7cm}|}
+			\hline
+			\textbf{نام جدول} & \textbf{کلید اصلی}\footnotemark & \textbf{کلیدهای خارجی}\footnotemark & \textbf{توضیحات و ارتباطات}\footnotemark \\ \hline
+			
+			\lr{Categories} & \lr{CategoryID} & - ندارد - & اطلاعات پایه‌ای دسته‌بندی محصولات \\ \hline
+			
+			\lr{Suppliers} & \lr{SupplierID} & - ندارد - & اطلاعات تامین‌کنندگان کالا \\ \hline
+			
+			\lr{Products} & \lr{ProductID} & \lr{SupplierID, CategoryID} & متصل به جداول تامین‌کنندگان و دسته‌بندی‌ها \\ \hline
+			
+			\lr{Customers} & \lr{CustomerID} & - ندارد - & اطلاعات مشتریان \\ \hline
+			
+			\lr{Employees} & \lr{EmployeeID} & \lr{ReportsTo} & فیلد \lr{ReportsTo} به شناسه خود جدول \lr{Employees} اشاره دارد (ارجاع به خود\footnotemark\ برای چارت سازمانی) \\ \hline
+			
+			\lr{Shippers} & \lr{ShipperID} & - ندارد - & اطلاعات شرکت‌های حمل‌ونقل و لجستیک \\ \hline
+			
+			\lr{Orders} & \lr{OrderID} & \lr{CustomerID, EmployeeID, ShipVia} & متصل به مشتری، کارمند ثبت‌کننده و شرکت حمل (فیلد \lr{ShipVia} به \lr{ShipperID} متصل است) \\ \hline
+			
+			\lr{Order\_Details} & \lr{(OrderID, ProductID)} & \lr{OrderID, ProductID} & جدول واسط: دارای کلید اصلی ترکیبی\footnotemark \\ \hline
+			
+			\lr{Region} & \lr{RegionID} & - ندارد - & مناطق جغرافیایی کلان \\ \hline
+			
+			\lr{Territories} & \lr{TerritoryID} & \lr{RegionID} & حوزه‌های جغرافیایی خردتر، متصل به جدول  \lr{Region} \\ \hline
+			
+			\lr{EmployeeTerritories} & \lr{(EmployeeID, TerritoryID)} & \lr{EmployeeID, TerritoryID} & جدول واسط: حل ارتباط چند-به-چند بین کارمندان و حوزه‌های کاری (کلید اصلی ترکیبی) \\ \hline
+			
+			\lr{CustomerDemographics} & \lr{CustomerTypeID} & - ندارد - & گروه‌های دموگرافیک مشتریان \\ \hline
+			
+			\lr{CustomerCustomerDemo} & \lr{(CustomerID, CustomerTypeID)} & \lr{CustomerID, CustomerTypeID} & جدول واسط: حل ارتباط چند-به-چند بین مشتریان و گروه‌های دموگرافیک \\ \hline
+		\end{tabular}%
+	}
+\end{table}
+
+% تعریف پانویس‌های مربوط به جدول خارج از محیط resizebox جهت نمایش صحیح
+\addtocounter{footnote}{-4}
+\LTRfootnotetext{Primary Key (PK)}
+\addtocounter{footnote}{1}
+\LTRfootnotetext{Foreign Keys (FK)}
+\addtocounter{footnote}{1}
+\LTRfootnotetext{Relation}
+\addtocounter{footnote}{1}
+\LTRfootnotetext{Self-referencing}
+\addtocounter{footnote}{1}
+\LTRfootnotetext{Composite Key}
+	
+	% ------------------- بخش جدید شاخص‌های کلیدی عملکرد ------------------- %
+	\newpage
+	\subsection[تعریف شاخص‌های کلیدی عملکرد]{تعریف شاخص‌های کلیدی عملکرد\LTRfootnote{KPIs (Key Performance Indicators)}}
+	
+	
+	
+	بر اساس تحلیل مدل کسب‌وکار سازمان‌به‌سازمان شرکت نورث‌ویند، شاخص‌های کلیدی عملکرد در سه حوزه اصلی تدوین شده‌اند. تمامی این شاخص‌ها دارای منطق محاسباتی شفاف بوده و جهت پشتیبانی از تصمیم‌گیری‌های مدیریتی طراحی شده‌اند:
+	
+	\subsubsection{حوزه فروش و درآمد}
+	\begin{itemize}
+		\item \textbf{ارزش کل فروش:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} مجموع درآمد حاصل از تمامی سفارش‌های ثبت‌شده (حاصل‌ضرب قیمت در تعداد) پس از کسر تخفیف‌های اعمال‌شده.
+			\item \textbf{کاربرد مدیریتی:} اصلی‌ترین معیار برای ارزیابی مقیاس، سنجش رشد کسب‌وکار و بررسی عملکرد کلی سیستم فروش.
+		\end{itemize}
+		
+		\item \textbf{میانگین ارزش سفارش:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} تقسیم ارزش کل فروش بر تعداد کل سفارش‌ها در یک بازه زمانی مشخص.
+			\item \textbf{کاربرد مدیریتی:} ارزیابی میزان موفقیت استراتژی‌های فروش مکمل و بیش‌فروشی در سبد خرید مشتریان سازمانی.
+		\end{itemize}
+		
+		\item \textbf{فروش و سودآوری منطقه‌ای:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} تجمیع و تفکیک میزان فروش بر اساس موقعیت جغرافیایی ثبت‌شده برای مشتریان.
+			\item \textbf{کاربرد مدیریتی:} شناسایی بازارهای هدف پربازده و تخصیص هوشمندانه بودجه برای توسعه شبکه فروش در مناطق جغرافیایی مستعد.
+		\end{itemize}
+	\end{itemize}
+	
+	\subsubsection{حوزه عملیات و لجستیک}
+	\begin{itemize}
+		\item \textbf{نرخ تحویل به‌موقع:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} نسبت تعداد سفارش‌هایی که پیش از تاریخ درخواستی مشتری ارسال شده‌اند به کل سفارش‌ها.
+			\item \textbf{کاربرد مدیریتی:} سنجش میزان پایبندی به تعهدات زمانی و ارزیابی کیفیت خدمات ارائه‌شده توسط شرکت‌های حمل‌ونقل.
+		\end{itemize}
+		
+		\item \textbf{متوسط زمان پردازش سفارش:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} محاسبه میانگین فاصله زمانی (به روز) میان لحظه ثبت سفارش تا تحویل آن به واحد ارسال.
+			\item \textbf{کاربرد مدیریتی:} سنجش چابکی سازمان و کشف گلوگاه‌های احتمالی در فرآیند انبارداری و پردازش سفارش.
+		\end{itemize}
+		
+		\item \textbf{نسبت هزینه حمل‌ونقل به ارزش سفارش:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} محاسبه سهم هزینه حمل از کل درآمد هر سفارش.
+			\item \textbf{کاربرد مدیریتی:} ارزیابی کارایی فرآیندهای لجستیکی و کنترل هزینه‌های سربار زنجیره تامین جهت حفظ حاشیه سود.
+		\end{itemize}
+	\end{itemize}
+	
+	\subsubsection{حوزه مشتریان و کارکنان}
+	\begin{itemize}
+		\item \textbf{ارزش طول عمر مشتری:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} مجموع ارزش خریدهای یک مشتری در کل بازه زمانی همکاری با مجموعه نورث‌ویند.
+			\item \textbf{کاربرد مدیریتی:} شناسایی مشتریان کلیدی و اولویت‌بندی تخصیص منابع برای خدمات پس از فروش و برنامه‌های وفاداری.
+		\end{itemize}
+		
+		\item \textbf{نرخ نگهداشت مشتری:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} درصد مشتریانی که پس از ثبت اولین سفارش، حداقل یک سفارش دیگر نیز در سیستم ثبت کرده‌اند.
+			\item \textbf{کاربرد مدیریتی:} ارزیابی میزان رضایت مشتریان از کیفیت محصولات و خدمات و موفقیت سازمان در حفظ روابط تجاری بلندمدت.
+		\end{itemize}
+		
+		\item \textbf{بهره‌وری فروش کارکنان:}
+		\begin{itemize}
+			\item \textbf{تعریف محاسباتی:} محاسبه حجم و ارزش کل فروش ایجادشده توسط هر یک از کارمندان به صورت مجزا.
+			\item \textbf{کاربرد مدیریتی:} ارزیابی دقیق عملکرد فردی نیروی کار، طراحی سیستم‌های پاداش و کمیسیون عادلانه و بهینه‌سازی ساختار تیم فروش.
+		\end{itemize}
+	\end{itemize}
+\end{document}
