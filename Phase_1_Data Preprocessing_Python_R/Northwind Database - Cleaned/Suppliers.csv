@@ -1,4 +1,4 @@
-SupplierID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax,HomePage
+﻿SupplierID,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country,Phone,Fax,HomePage
 1,Exotic Liquids,Charlotte Cooper,Purchasing Manager,49 Gilbert St.,London,Unknown,Ec1 4Sd,United Kingdom,(171) 555-2222,No Fax,No Website
 2,New Orleans Cajun Delights,Unknown,Order Administrator,P.O. Box 78934,Unknown,La,70117,Usa,(100) 555-4822,No Fax,No Website
 3,Grandma Kelly'S Homestead,Unknown,Sales Representative,707 Oxford Rd.,Ann Arbor,Mi,48104,Us,(313) 555-5735,(313) 555-3349,No Website
