@@ -194,9 +194,10 @@ CREATE TABLE `orders` (
   `ShipPostalCode` varchar(50) DEFAULT NULL,
   `ShipCountry` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`OrderID`),
-  KEY `CustomerID` (`CustomerID`),
-  KEY `EmployeeID` (`EmployeeID`),
   KEY `ShipVia` (`ShipVia`),
+  KEY `idx_orders_employeeid_orderdate` (`EmployeeID`,`OrderDate`),
+  KEY `idx_orders_shipcountry_shipcity_freight` (`ShipCountry`,`ShipCity`,`Freight`),
+  KEY `idx_orders_customerid_orderdate` (`CustomerID`,`OrderDate`),
   CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`),
   CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`EmployeeID`) REFERENCES `employees` (`EmployeeID`),
   CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`ShipVia`) REFERENCES `shippers` (`ShipperID`)
@@ -380,6 +381,195 @@ INSERT INTO `territories` VALUES (1581,'Westboro',1),(1730,'Bedford',1),(1833,'G
 UNLOCK TABLES;
 
 --
+-- Temporary view structure for view `v_category_price_analysis`
+--
+
+DROP TABLE IF EXISTS `v_category_price_analysis`;
+/*!50001 DROP VIEW IF EXISTS `v_category_price_analysis`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_category_price_analysis` AS SELECT 
+ 1 AS `CategoryID`,
+ 1 AS `CategoryName`,
+ 1 AS `CategoryAveragePrice`,
+ 1 AS `OverallAveragePrice`,
+ 1 AS `DifferenceFromAverage`,
+ 1 AS `PriceStatus`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_distinct_ship_countries`
+--
+
+DROP TABLE IF EXISTS `v_distinct_ship_countries`;
+/*!50001 DROP VIEW IF EXISTS `v_distinct_ship_countries`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_distinct_ship_countries` AS SELECT 
+ 1 AS `ShipCountry`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_employee_productivity_index`
+--
+
+DROP TABLE IF EXISTS `v_employee_productivity_index`;
+/*!50001 DROP VIEW IF EXISTS `v_employee_productivity_index`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_employee_productivity_index` AS SELECT 
+ 1 AS `EmployeeID`,
+ 1 AS `EmployeeName`,
+ 1 AS `TotalOrders`,
+ 1 AS `YearsWorked`,
+ 1 AS `ProductivityIndex`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_eta_correlation_country_discount`
+--
+
+DROP TABLE IF EXISTS `v_eta_correlation_country_discount`;
+/*!50001 DROP VIEW IF EXISTS `v_eta_correlation_country_discount`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_eta_correlation_country_discount` AS SELECT 
+ 1 AS `Relationship`,
+ 1 AS `SS_Between`,
+ 1 AS `SS_Within`,
+ 1 AS `SS_Total`,
+ 1 AS `Eta_Correlation`,
+ 1 AS `F_Statistic`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_eta_correlation_employee_discount`
+--
+
+DROP TABLE IF EXISTS `v_eta_correlation_employee_discount`;
+/*!50001 DROP VIEW IF EXISTS `v_eta_correlation_employee_discount`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_eta_correlation_employee_discount` AS SELECT 
+ 1 AS `Relationship`,
+ 1 AS `SS_Between`,
+ 1 AS `SS_Within`,
+ 1 AS `SS_Total`,
+ 1 AS `Eta_Correlation`,
+ 1 AS `F_Statistic`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_eta_correlation_shipper_discount`
+--
+
+DROP TABLE IF EXISTS `v_eta_correlation_shipper_discount`;
+/*!50001 DROP VIEW IF EXISTS `v_eta_correlation_shipper_discount`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_eta_correlation_shipper_discount` AS SELECT 
+ 1 AS `Relationship`,
+ 1 AS `SS_Between`,
+ 1 AS `SS_Within`,
+ 1 AS `SS_Total`,
+ 1 AS `Eta_Correlation`,
+ 1 AS `F_Statistic`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_pearson_correlation_qty_discount`
+--
+
+DROP TABLE IF EXISTS `v_pearson_correlation_qty_discount`;
+/*!50001 DROP VIEW IF EXISTS `v_pearson_correlation_qty_discount`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_pearson_correlation_qty_discount` AS SELECT 
+ 1 AS `TotalRecords`,
+ 1 AS `Correlation_Quantity_Discount`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_top_3_employees_by_orders`
+--
+
+DROP TABLE IF EXISTS `v_top_3_employees_by_orders`;
+/*!50001 DROP VIEW IF EXISTS `v_top_3_employees_by_orders`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_top_3_employees_by_orders` AS SELECT 
+ 1 AS `EmployeeID`,
+ 1 AS `EmployeeName`,
+ 1 AS `TotalOrders`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_top_3_employees_productivity`
+--
+
+DROP TABLE IF EXISTS `v_top_3_employees_productivity`;
+/*!50001 DROP VIEW IF EXISTS `v_top_3_employees_productivity`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_top_3_employees_productivity` AS SELECT 
+ 1 AS `EmployeeID`,
+ 1 AS `EmployeeName`,
+ 1 AS `TotalOrders`,
+ 1 AS `YearsWorked`,
+ 1 AS `ProductivityIndex`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_top_3_freight_cities_orders`
+--
+
+DROP TABLE IF EXISTS `v_top_3_freight_cities_orders`;
+/*!50001 DROP VIEW IF EXISTS `v_top_3_freight_cities_orders`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_top_3_freight_cities_orders` AS SELECT 
+ 1 AS `OrderID`,
+ 1 AS `CustomerID`,
+ 1 AS `OrderDate`,
+ 1 AS `Freight`,
+ 1 AS `ShipCity`,
+ 1 AS `ShipCountry`,
+ 1 AS `ShipRegion`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_top_3_freight_cities_summary`
+--
+
+DROP TABLE IF EXISTS `v_top_3_freight_cities_summary`;
+/*!50001 DROP VIEW IF EXISTS `v_top_3_freight_cities_summary`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_top_3_freight_cities_summary` AS SELECT 
+ 1 AS `ShipCity`,
+ 1 AS `ShipCountry`,
+ 1 AS `TotalFreight`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `v_top_3_freight_orders`
+--
+
+DROP TABLE IF EXISTS `v_top_3_freight_orders`;
+/*!50001 DROP VIEW IF EXISTS `v_top_3_freight_orders`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `v_top_3_freight_orders` AS SELECT 
+ 1 AS `OrderID`,
+ 1 AS `CustomerID`,
+ 1 AS `OrderDate`,
+ 1 AS `Freight`,
+ 1 AS `ShipCity`,
+ 1 AS `ShipCountry`,
+ 1 AS `ShipRegion`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Dumping routines for database 'northwind_project'
 --
 
@@ -400,6 +590,222 @@ UNLOCK TABLES;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_category_price_analysis`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_category_price_analysis`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_category_price_analysis` AS select `c`.`CategoryID` AS `CategoryID`,`c`.`CategoryName` AS `CategoryName`,round(avg(`p`.`UnitPrice`),2) AS `CategoryAveragePrice`,(select round(avg(`products`.`UnitPrice`),2) from `products`) AS `OverallAveragePrice`,round((avg(`p`.`UnitPrice`) - (select avg(`products`.`UnitPrice`) from `products`)),2) AS `DifferenceFromAverage`,(case when (avg(`p`.`UnitPrice`) > (select avg(`products`.`UnitPrice`) from `products`)) then 'Higher than Average' else 'Lower/Equal to Average' end) AS `PriceStatus` from (`products` `p` join `categories` `c` on((`p`.`CategoryID` = `c`.`CategoryID`))) group by `c`.`CategoryID`,`c`.`CategoryName` order by `CategoryAveragePrice` desc */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_distinct_ship_countries`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_distinct_ship_countries`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_distinct_ship_countries` AS select distinct `orders`.`ShipCountry` AS `ShipCountry` from `orders` order by `orders`.`ShipCountry` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_employee_productivity_index`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_employee_productivity_index`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_employee_productivity_index` AS select `e`.`EmployeeID` AS `EmployeeID`,concat(`e`.`FirstName`,' ',`e`.`LastName`) AS `EmployeeName`,count(`o`.`OrderID`) AS `TotalOrders`,timestampdiff(YEAR,`e`.`HireDate`,(select max(`orders`.`OrderDate`) from `orders`)) AS `YearsWorked`,round((count(`o`.`OrderID`) / timestampdiff(YEAR,`e`.`HireDate`,(select max(`orders`.`OrderDate`) from `orders`))),2) AS `ProductivityIndex` from (`employees` `e` join `orders` `o` on((`e`.`EmployeeID` = `o`.`EmployeeID`))) group by `e`.`EmployeeID`,`e`.`FirstName`,`e`.`LastName`,`e`.`HireDate` order by `ProductivityIndex` desc */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_eta_correlation_country_discount`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_eta_correlation_country_discount`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_eta_correlation_country_discount` AS with `globalstats` as (select avg(`order_details`.`Discount`) AS `GlobalAvg` from `order_details`), `categorystats` as (select `o`.`ShipCountry` AS `ShipCountry`,count(`od`.`Discount`) AS `CategoryCount`,avg(`od`.`Discount`) AS `CategoryAvg` from (`order_details` `od` join `orders` `o` on((`od`.`OrderID` = `o`.`OrderID`))) group by `o`.`ShipCountry`), `sumofsquares` as (select (select sum((`categorystats`.`CategoryCount` * pow((`categorystats`.`CategoryAvg` - `globalstats`.`GlobalAvg`),2))) from (`categorystats` join `globalstats`)) AS `SSB`,(select sum(pow((`od`.`Discount` - `g`.`GlobalAvg`),2)) from (`order_details` `od` join `globalstats` `g`)) AS `SST`,(select count(0) from `categorystats`) AS `k`,(select count(0) from `order_details`) AS `N`) select 'Country vs Discount' AS `Relationship`,round(`sumofsquares`.`SSB`,4) AS `SS_Between`,round((`sumofsquares`.`SST` - `sumofsquares`.`SSB`),4) AS `SS_Within`,round(`sumofsquares`.`SST`,4) AS `SS_Total`,round(sqrt((`sumofsquares`.`SSB` / `sumofsquares`.`SST`)),4) AS `Eta_Correlation`,round(((`sumofsquares`.`SSB` / (`sumofsquares`.`k` - 1)) / ((`sumofsquares`.`SST` - `sumofsquares`.`SSB`) / (`sumofsquares`.`N` - `sumofsquares`.`k`))),4) AS `F_Statistic` from `sumofsquares` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_eta_correlation_employee_discount`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_eta_correlation_employee_discount`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_eta_correlation_employee_discount` AS with `globalstats` as (select avg(`order_details`.`Discount`) AS `GlobalAvg` from `order_details`), `categorystats` as (select `o`.`EmployeeID` AS `EmployeeID`,count(`od`.`Discount`) AS `CategoryCount`,avg(`od`.`Discount`) AS `CategoryAvg` from (`order_details` `od` join `orders` `o` on((`od`.`OrderID` = `o`.`OrderID`))) group by `o`.`EmployeeID`), `sumofsquares` as (select (select sum((`categorystats`.`CategoryCount` * pow((`categorystats`.`CategoryAvg` - `globalstats`.`GlobalAvg`),2))) from (`categorystats` join `globalstats`)) AS `SSB`,(select sum(pow((`od`.`Discount` - `g`.`GlobalAvg`),2)) from (`order_details` `od` join `globalstats` `g`)) AS `SST`,(select count(0) from `categorystats`) AS `k`,(select count(0) from `order_details`) AS `N`) select 'Employee vs Discount' AS `Relationship`,round(`sumofsquares`.`SSB`,4) AS `SS_Between`,round((`sumofsquares`.`SST` - `sumofsquares`.`SSB`),4) AS `SS_Within`,round(`sumofsquares`.`SST`,4) AS `SS_Total`,round(sqrt((`sumofsquares`.`SSB` / `sumofsquares`.`SST`)),4) AS `Eta_Correlation`,round(((`sumofsquares`.`SSB` / (`sumofsquares`.`k` - 1)) / ((`sumofsquares`.`SST` - `sumofsquares`.`SSB`) / (`sumofsquares`.`N` - `sumofsquares`.`k`))),4) AS `F_Statistic` from `sumofsquares` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_eta_correlation_shipper_discount`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_eta_correlation_shipper_discount`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_eta_correlation_shipper_discount` AS with `globalstats` as (select avg(`order_details`.`Discount`) AS `GlobalAvg` from `order_details`), `categorystats` as (select `o`.`ShipVia` AS `ShipVia`,count(`od`.`Discount`) AS `CategoryCount`,avg(`od`.`Discount`) AS `CategoryAvg` from (`order_details` `od` join `orders` `o` on((`od`.`OrderID` = `o`.`OrderID`))) group by `o`.`ShipVia`), `sumofsquares` as (select (select sum((`categorystats`.`CategoryCount` * pow((`categorystats`.`CategoryAvg` - `globalstats`.`GlobalAvg`),2))) from (`categorystats` join `globalstats`)) AS `SSB`,(select sum(pow((`od`.`Discount` - `g`.`GlobalAvg`),2)) from (`order_details` `od` join `globalstats` `g`)) AS `SST`,(select count(0) from `categorystats`) AS `k`,(select count(0) from `order_details`) AS `N`) select 'Shipper vs Discount' AS `Relationship`,round(`sumofsquares`.`SSB`,4) AS `SS_Between`,round((`sumofsquares`.`SST` - `sumofsquares`.`SSB`),4) AS `SS_Within`,round(`sumofsquares`.`SST`,4) AS `SS_Total`,round(sqrt((`sumofsquares`.`SSB` / `sumofsquares`.`SST`)),4) AS `Eta_Correlation`,round(((`sumofsquares`.`SSB` / (`sumofsquares`.`k` - 1)) / ((`sumofsquares`.`SST` - `sumofsquares`.`SSB`) / (`sumofsquares`.`N` - `sumofsquares`.`k`))),4) AS `F_Statistic` from `sumofsquares` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_pearson_correlation_qty_discount`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_pearson_correlation_qty_discount`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_pearson_correlation_qty_discount` AS select count(0) AS `TotalRecords`,round((((count(0) * sum((`order_details`.`Quantity` * `order_details`.`Discount`))) - (sum(`order_details`.`Quantity`) * sum(`order_details`.`Discount`))) / sqrt((((count(0) * sum((`order_details`.`Quantity` * `order_details`.`Quantity`))) - pow(sum(`order_details`.`Quantity`),2)) * ((count(0) * sum((`order_details`.`Discount` * `order_details`.`Discount`))) - pow(sum(`order_details`.`Discount`),2))))),4) AS `Correlation_Quantity_Discount` from `order_details` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_top_3_employees_by_orders`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_top_3_employees_by_orders`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_top_3_employees_by_orders` AS select `e`.`EmployeeID` AS `EmployeeID`,concat(`e`.`FirstName`,' ',`e`.`LastName`) AS `EmployeeName`,count(`o`.`OrderID`) AS `TotalOrders` from (`employees` `e` join `orders` `o` on((`e`.`EmployeeID` = `o`.`EmployeeID`))) group by `e`.`EmployeeID`,`e`.`FirstName`,`e`.`LastName` order by `TotalOrders` desc limit 3 */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_top_3_employees_productivity`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_top_3_employees_productivity`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_top_3_employees_productivity` AS select `t`.`EmployeeID` AS `EmployeeID`,`t`.`EmployeeName` AS `EmployeeName`,`t`.`TotalOrders` AS `TotalOrders`,`t`.`YearsWorked` AS `YearsWorked`,round((`t`.`TotalOrders` / `t`.`YearsWorked`),2) AS `ProductivityIndex` from (select `e`.`EmployeeID` AS `EmployeeID`,concat(`e`.`FirstName`,' ',`e`.`LastName`) AS `EmployeeName`,count(`o`.`OrderID`) AS `TotalOrders`,timestampdiff(YEAR,`e`.`HireDate`,(select max(`orders`.`OrderDate`) from `orders`)) AS `YearsWorked` from (`employees` `e` join `orders` `o` on((`e`.`EmployeeID` = `o`.`EmployeeID`))) group by `e`.`EmployeeID`,`e`.`FirstName`,`e`.`LastName`,`e`.`HireDate` order by `TotalOrders` desc limit 3) `t` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_top_3_freight_cities_orders`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_top_3_freight_cities_orders`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_top_3_freight_cities_orders` AS select `orders`.`OrderID` AS `OrderID`,`orders`.`CustomerID` AS `CustomerID`,`orders`.`OrderDate` AS `OrderDate`,`orders`.`Freight` AS `Freight`,`orders`.`ShipCity` AS `ShipCity`,`orders`.`ShipCountry` AS `ShipCountry`,`orders`.`ShipRegion` AS `ShipRegion` from `orders` where (`orders`.`ShipCity`,`orders`.`ShipCountry`) in (select `topcities`.`ShipCity`,`topcities`.`ShipCountry` from (select `orders`.`ShipCity` AS `ShipCity`,`orders`.`ShipCountry` AS `ShipCountry`,sum(`orders`.`Freight`) AS `TotalFreight` from `orders` where (`orders`.`ShipCountry` in ('Argentina','Brazil','Canada','Mexico','USA','Venezuela')) group by `orders`.`ShipCity`,`orders`.`ShipCountry` order by `TotalFreight` desc limit 3) `topcities`) order by `orders`.`ShipCity`,`orders`.`Freight` desc */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_top_3_freight_cities_summary`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_top_3_freight_cities_summary`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_top_3_freight_cities_summary` AS select `orders`.`ShipCity` AS `ShipCity`,`orders`.`ShipCountry` AS `ShipCountry`,round(sum(`orders`.`Freight`),2) AS `TotalFreight` from `orders` where (`orders`.`ShipCountry` in ('Argentina','Brazil','Canada','Mexico','USA','Venezuela')) group by `orders`.`ShipCity`,`orders`.`ShipCountry` order by `TotalFreight` desc limit 3 */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `v_top_3_freight_orders`
+--
+
+/*!50001 DROP VIEW IF EXISTS `v_top_3_freight_orders`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `v_top_3_freight_orders` AS select `orders`.`OrderID` AS `OrderID`,`orders`.`CustomerID` AS `CustomerID`,`orders`.`OrderDate` AS `OrderDate`,`orders`.`Freight` AS `Freight`,`orders`.`ShipCity` AS `ShipCity`,`orders`.`ShipCountry` AS `ShipCountry`,`orders`.`ShipRegion` AS `ShipRegion` from `orders` where (`orders`.`ShipCountry` in ('Argentina','Brazil','Canada','Mexico','USA','Venezuela')) order by `orders`.`Freight` desc limit 3 */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -410,4 +816,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-07-17 20:06:08
+-- Dump completed on 2026-07-24 22:45:47

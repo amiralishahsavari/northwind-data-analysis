@@ -1,16 +1,14 @@
 --  6.1 تحلیل هزینه‌های حمل و توزیع جغرافیایی
 
 -- 6.1.1 شناسایی کشورهای قاره آمریکا
+CREATE OR REPLACE VIEW v_distinct_ship_countries AS
 SELECT DISTINCT ShipCountry
 FROM Orders
 ORDER BY ShipCountry;
 
 
-
-
-
-
 -- 6.1.3 نمایش سه سفارش با بیشترین هزینه حمل
+CREATE OR REPLACE VIEW v_top_3_freight_orders AS
 SELECT
     OrderID,
     CustomerID,
@@ -33,8 +31,7 @@ LIMIT 3;
 
 
 -- 6.1.2 شناسایی سه شهر با بیشترین مجموع هزینه حمل
-
-
+CREATE OR REPLACE VIEW v_top_3_freight_cities_summary AS
 SELECT
     ShipCity,
     ShipCountry,
@@ -47,6 +44,8 @@ GROUP BY ShipCity, ShipCountry
 ORDER BY TotalFreight DESC
 LIMIT 3;
 
+-- جزئیات سفارش‌های سه شهر با بیشترین مجموع هزینه حمل
+CREATE OR REPLACE VIEW v_top_3_freight_cities_orders AS
 SELECT
     OrderID,
     CustomerID,
@@ -78,7 +77,7 @@ ORDER BY ShipCity, Freight DESC;
 
 -- 6.2 ارزیابی عملکرد کارکنان
 -- 6.2.1 شناسایی سه کارمند برتر بر اساس تعداد سفارش‌ها
-
+CREATE OR REPLACE VIEW v_top_3_employees_by_orders AS
 SELECT
     e.EmployeeID,
     CONCAT(e.FirstName, ' ', e.LastName) AS EmployeeName,
@@ -94,11 +93,8 @@ ORDER BY TotalOrders DESC
 LIMIT 3;
 
 
-
-
-
---   6.2.2 محاسبه شاخص بهره‌وری کارکنان
-
+-- 6.2.2 محاسبه شاخص بهره‌وری کارکنان
+CREATE OR REPLACE VIEW v_employee_productivity_index AS
 SELECT
     e.EmployeeID,
     CONCAT(e.FirstName, ' ', e.LastName) AS EmployeeName,
@@ -120,10 +116,8 @@ GROUP BY
 ORDER BY ProductivityIndex DESC;
 
 
-
-
 -- 6.2.3 تحلیل بهره‌وری سه کارمند برتر
-
+CREATE OR REPLACE VIEW v_top_3_employees_productivity AS
 SELECT
     T.EmployeeID,
     T.EmployeeName,
@@ -150,20 +144,9 @@ FROM
 ) AS T;
 
 
--- بخش اول: تحلیل میانگین قیمت دسته‌بندی‌ها در مقایسه با میانگین کل
--- SELECT 
---    c.CategoryID,
- --   c.CategoryName,
-   -- ROUND(AVG(p.UnitPrice), 2) AS CategoryAveragePrice,
-   -- (SELECT ROUND(AVG(UnitPrice), 2) FROM Products) AS OverallAveragePrice,
-   -- ROUND(AVG(p.UnitPrice) - (SELECT AVG(UnitPrice) FROM Products), 2) AS DifferenceFromAverage
--- FROM Products p
--- JOIN Categories c ON p.CategoryID = c.CategoryID
--- GROUP BY c.CategoryID, c.CategoryName
--- HAVING AVG(p.UnitPrice) > (SELECT AVG(UnitPrice) FROM Products)
--- ORDER BY CategoryAveragePrice DESC;
- -- 6.3 ارزیابی سیاست‌های قیمت‌گذاری و الگوهای فروش
--- ب6.3.1 تحلیل میانگین قیمت دسته‌بندی‌ها در مقایسه با میانگین کل
+-- 6.3 ارزیابی سیاست‌های قیمت‌گذاری و الگوهای فروش
+-- 6.3.1 تحلیل میانگین قیمت دسته‌بندی‌ها در مقایسه با میانگین کل
+CREATE OR REPLACE VIEW v_category_price_analysis AS
 SELECT 
     c.CategoryID,
     c.CategoryName,
@@ -181,6 +164,7 @@ ORDER BY CategoryAveragePrice DESC;
 
 
 -- 6.3.2 محاسبه ضریب همبستگی پیرسون بین مقدار خرید و تخفیف
+CREATE OR REPLACE VIEW v_pearson_correlation_qty_discount AS
 SELECT 
     COUNT(*) AS TotalRecords,
     ROUND(
@@ -191,9 +175,10 @@ SELECT
         ), 
         4
     ) AS Correlation_Quantity_Discount
-  FROM order_details;
+FROM order_details;
 
- -- 6.3.3 تحلیل وابستگی تخفیف و کارمند مسئول با استفاده از ضریب Eta
+-- 6.3.3 تحلیل وابستگی تخفیف و کارمند مسئول با استفاده از ضریب Eta
+CREATE OR REPLACE VIEW v_eta_correlation_employee_discount AS
 WITH GlobalStats AS (
     SELECT AVG(Discount) AS GlobalAvg FROM order_details
 ),
@@ -225,9 +210,7 @@ FROM SumOfSquares;
 
 
 -- 6.3.4 تحلیل وابستگی تخفیف و کشور مشتری با استفاده از ضریب Eta
-
-
-
+CREATE OR REPLACE VIEW v_eta_correlation_country_discount AS
 WITH GlobalStats AS (
     SELECT AVG(Discount) AS GlobalAvg FROM order_details
 ),
@@ -258,11 +241,8 @@ SELECT
 FROM SumOfSquares;
  
 
-
-
-
 -- 6.3.5 تحلیل وابستگی تخفیف و شرکت حمل‌ونقل با استفاده از ضریب Eta
-
+CREATE OR REPLACE VIEW v_eta_correlation_shipper_discount AS
 WITH GlobalStats AS (
     SELECT AVG(Discount) AS GlobalAvg FROM order_details
 ),
@@ -291,6 +271,3 @@ SELECT
         ((SST-SSB)/(N-k))
     ,4) AS F_Statistic
 FROM SumOfSquares;
-
-
-
